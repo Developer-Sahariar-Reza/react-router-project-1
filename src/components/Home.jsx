@@ -15,7 +15,7 @@ const Home = () => {
           Collection that Redefines Your Wardrobe with Unmatched Style and
           Sophistication. Elevate Your Fashion Game Today!
         </p>
-        <div className="hero-buttons">
+        <div className="button-container">
           <button className="common-button">
             <Link to="/shop">Shop Now</Link>
           </button>
