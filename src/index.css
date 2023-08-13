@@ -1,9 +1,47 @@
-/* Google Font Lato import */
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+/* google font poppins import  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap");
 
 /* common css  */
 * {
-  font-family: "Lato", sans-serif;
-  padding: 0;
-  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Tailwind CSS  */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* header component design  */
+
+.header-container {
+  @apply w-3/4 mx-auto mt-4 flex justify-between items-center;
+}
+.logo-container a {
+  @apply flex justify-center items-center;
+}
+.logo {
+  @apply w-14 h-14;
+}
+.brand-title {
+  @apply font-extrabold hidden md:block md:text-3xl lg:text-4xl text-[#5394cf];
+}
+
+/* menu container design  */
+.menu-container {
+  @apply lg:flex flex-col lg:flex-row justify-center items-center absolute lg:static;
+}
+.responsive-position-1 {
+  @apply top-20 right-40 md:right-96;
+}
+.responsive-position-2 {
+  @apply -top-60;
+}
+.menu {
+  @apply mr-0 lg:mr-5;
+}
+.active {
+  @apply font-semibold text-xs lg:text-2xl text-[#5394cf] underline;
+}
+.not-active {
+  @apply font-semibold text-xs lg:text-2xl text-[#7a7473];
 }
