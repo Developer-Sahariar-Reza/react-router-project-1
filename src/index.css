@@ -82,3 +82,32 @@
 .hero-subtitle {
   @apply text-lg font-bold mb-5 text-[#7a7473] text-center;
 }
+
+/* Shop Component && Product Component Design Start */
+.product-container {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10;
+}
+.product-card {
+  @apply border-2 rounded-md;
+}
+.product-image {
+  @apply py-6 flex justify-center items-center;
+}
+.product-image img {
+  @apply rounded-md;
+}
+.product-info {
+  @apply pl-10 pb-8;
+}
+.product-info h2 {
+  @apply font-bold mb-4 text-2xl text-[#5394cf];
+}
+.product-info p {
+  @apply text-lg text-[#7a7473] mb-3;
+}
+.product-info h4 {
+  @apply text-xl text-[#7a7473] mb-4;
+}
+.product-btn {
+  @apply flex items-center;
+}
