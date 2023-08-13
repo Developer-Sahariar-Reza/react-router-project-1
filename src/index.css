@@ -53,6 +53,11 @@
   @apply font-semibold text-xs lg:text-2xl text-[#7a7473];
 }
 
+/* Footer component Design  */
+.footer-text {
+  @apply text-center text-sm md:text-xl lg:text-2xl text-[#7a7473] mb-3;
+}
+
 /* Home Component Design Start  */
 .hero {
   @apply grid grid-cols-1 lg:grid-cols-2 gap-8 justify-center items-center;
@@ -61,7 +66,7 @@
   @apply text-2xl lg:text-4xl font-extrabold mb-5 text-[#5394cf] text-center;
 }
 .hero-subtitle {
-  @apply text-xl font-bold mb-5 text-[#7a7473] text-center;
+  @apply text-lg font-bold mb-5 text-[#7a7473] text-center;
 }
 .hero-buttons {
   @apply flex justify-center items-center;
