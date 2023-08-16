@@ -18,7 +18,7 @@ const Shop = () => {
   // Add to cart function
   const handleAddToCart = (id) => {
     addToDb(id);
-    toast("Product Added to Your Cart ✔️");
+    toast.success("Product Added to Your Cart");
   };
 
   return (

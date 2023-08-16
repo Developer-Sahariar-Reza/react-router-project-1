@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 //add data to local storage
 export const addToDb = (id) => {
   let shoppingCart = {};
@@ -34,4 +35,17 @@ export const getStoredCart = () => {
   }
 
   return shoppingCart;
+};
+
+// remove specific data from local storage
+export const removeFromDb = (id) => {
+  const storedCart = localStorage.getItem("shopping-cart");
+  if (storedCart) {
+    const shoppingCart = JSON.parse(storedCart);
+    if (id in shoppingCart) {
+      delete shoppingCart[id];
+      localStorage.setItem("shopping-cart", JSON.stringify(shoppingCart));
+      toast.error("Product Removed");
+    }
+  }
 };

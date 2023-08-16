@@ -1,8 +1,9 @@
 import React from "react";
 import { TrashIcon } from "@heroicons/react/24/solid";
 
-const CartCard = ({ product }) => {
+const CartCard = ({ product, handleRemoveButton }) => {
   const { id, img, name, quantity, price } = product;
+  const productTotalPrice = price * quantity;
   return (
     <div className="cart-box">
       <div className="cart-image">
@@ -15,10 +16,10 @@ const CartCard = ({ product }) => {
         </div>
         <div className="cart-info-text">
           <p>Quantity: {quantity}</p>
-          <p>Total: $</p>
+          <p>Total: ${productTotalPrice}</p>
         </div>
         <div className="cart-remove-button">
-          <button>
+          <button onClick={() => handleRemoveButton(id)}>
             <p>
               <TrashIcon className="w-6 h-6" />
             </p>
