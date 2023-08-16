@@ -1,7 +1,7 @@
 import React from "react";
 import { TrashIcon } from "@heroicons/react/24/solid";
 
-const CartCard = ({ product, handleRemoveButton }) => {
+const CartCard = ({ product, handleRemoveButton, handleClearCartButton }) => {
   const { id, img, name, quantity, price } = product;
   const productTotalPrice = price * quantity;
   return (

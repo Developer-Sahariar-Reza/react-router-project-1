@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import CartCard from "./CartCard";
-import { removeFromDb } from "../utilities/fakeDB";
+import { removeFromDb, deleteShoppingCart } from "../utilities/fakeDB";
 
 const Cart = () => {
   const { cartArray } = useLoaderData();
@@ -21,6 +21,11 @@ const Cart = () => {
   // remove from ui and local storage
   const handleRemoveButton = (id) => {
     removeFromDb(id);
+  };
+
+  // clear cart
+  const handleClearCartButton = () => {
+    deleteShoppingCart();
   };
 
   return (
@@ -47,7 +52,9 @@ const Cart = () => {
 
       <div className="cart-button-container">
         {cartArray.length > 0 ? (
-          <button className="common-button">Clear Cart</button>
+          <button className="common-button" onClick={handleClearCartButton}>
+            Clear Cart
+          </button>
         ) : (
           <button className="common-button">
             <Link to="/shop">Back To Shop</Link>

@@ -49,3 +49,8 @@ export const removeFromDb = (id) => {
     }
   }
 };
+
+// clear data from local storage
+export const deleteShoppingCart = () => {
+  localStorage.removeItem("shopping-cart");
+};
