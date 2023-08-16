@@ -114,3 +114,35 @@
 .view-more-button-container {
   @apply text-center mb-10;
 }
+
+/* Cart & CartCard component design start  */
+.cart-info-title {
+  @apply mt-10 md:mt-10 lg:mt-20 font-extrabold text-3xl text-[#5394cf];
+}
+.cart-container {
+  @apply mt-14 flex flex-col justify-center items-center;
+}
+.cart-box {
+  @apply my-7 border border-2 rounded-lg grid grid-cols-2 p-5;
+}
+.cart-image img {
+  @apply rounded-lg;
+}
+.cart-info-text {
+  @apply flex justify-between px-3 py-3 items-center;
+}
+.cart-info-text h3 {
+  @apply font-semibold text-xl text-[#5394cf];
+}
+.cart-info-text p {
+  @apply text-lg text-[#7a7473];
+}
+.cart-remove-button {
+  @apply w-1/4 mx-auto mt-4;
+}
+.cart-remove-button button {
+  @apply flex justify-between items-center border rounded-md px-3 py-3 border-[#5394cf] hover:border-[#7a7473] text-[#5394cf] hover:text-[#7a7473];
+}
+.cart-btn-text {
+  @apply font-semibold;
+}
