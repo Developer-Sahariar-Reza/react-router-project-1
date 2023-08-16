@@ -111,3 +111,6 @@
 .product-btn {
   @apply flex items-center;
 }
+.view-more-button-container {
+  @apply text-center mb-10;
+}
